@@ -1,10 +1,9 @@
-# Mercado Liebre
-Clon de Mercado Libre desarrollado utilizando Express para el back-end y EJS como motor de vistas para el front-end.
+# Turnos DH
+Recuperatorio de Final de DH. Realizado por Alex Bozzetto.
 
 ## Features
-- Visualizar, crear, editar y eliminar productos (CRUD).
+- Visualizar, crear  y eliminar productos.
 - Registro e inicio de sesión utilizando session y cookies.
-- Permisos especiales según el tipo de usuario para realizar determinadas tareas.
 
 ## Dependencias utilizadas
 - Express
@@ -17,5 +16,4 @@ Clon de Mercado Libre desarrollado utilizando Express para el back-end y EJS com
 
 # Usuarios y permisos
 - Administrador (admin / admin): Puede crear, editar y borrar productos.
-- Usuario (user / user): Puede crear productos.
 - Invitado (no logueado): Únicamente puede visualizar productos.
