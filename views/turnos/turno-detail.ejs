@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('partials/head-base.ejs', {title: 'Asignar Turno'}) %>
+        <link rel="stylesheet" href="/css/turno-detail.css" />
+    </head>
+
+    <body>
+        <header><%- include('partials/header.ejs') %></header>
+        <main>
+            <h2 class="title" style="text-align: left; font-size: 22px">
+                <%= turno.name%>
+            </h2>
+
+            <article class="bg-white-turno">
+                
+                <div class="buy-info">
+                    <h2 class="title-turno"><%= turno.id%></h2>
+                    <p class="price-turno">
+                        <%= turno.dni%>
+                    </p>
+                    <p class="conditions-turno">
+                        <i class="fas fa-credit-card green"></i> <%= turno.email%>
+                    </p>
+                    <p class="conditions-turno">
+                        <i class="fas fa-store green"></i>
+                        <%= turno.sector%>
+
+                    </p>
+                    <form action="">
+                        <button class="submit" type="submit"><a href="/turnos/delete/<%= turno.id %>">Borrar Turno</a></button>  
+                    </form>
+                    
+            </article>
+        </main>
+    </body>
+</html>

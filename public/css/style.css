@@ -1,0 +1,310 @@
+/* Overall Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    background-color: #ebebeb !important;
+}
+
+/* Header */
+
+header {
+    background-color: #b2b3eb;
+    
+}
+
+header p {
+    text-align: center;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: left;
+}
+
+
+
+
+/* Main */
+
+main {
+    width: 90%;
+    margin: auto;
+}
+
+main h2 {
+    margin: 20px 0px;
+    text-align: center;
+}
+
+article {
+    padding: 20px;
+    margin: 15px 5px;
+}
+
+.last-visit article:hover,
+.offer article:hover,
+.all-items article:hover {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
+.bg-white {
+    background-color: white;
+}
+
+.product-info {
+    border-top: 1px solid #ebebeb;
+}
+
+p {
+    font-size: 12px;
+}
+
+.title {
+    font-size: 24px;
+    text-align: left;
+    margin-left: 2%;
+    color: gray;
+    font-weight: 500;
+}
+
+.price {
+    font-size: 18px;
+    width: 30%;
+}
+
+.discount {
+    font-size: 16px;
+    width: 70%;
+    color: #39b54a;
+}
+
+.description {
+    font-size: 16px;
+    font-weight: 400;
+    color: gray;
+    display: none;
+}
+
+.last-visit article:hover .description,
+.offer article:hover .description,
+.all-items article:hover .description {
+    display: block;
+}
+
+.ml-verde {
+    color: #39b54a;
+    background-color: white;
+    border: 1px solid green;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+article:hover .ml-verde {
+    transform: rotate(360deg);
+    transition: transform 2s;
+}
+
+.ml-verde:hover {
+    transform: rotate(360deg);
+    transition: transform 2s;
+}
+
+.ml-azul {
+    color: #1065be;
+    font-size: 25px;
+    margin: 10px;
+}
+
+/* Footer */
+
+footer p {
+    text-align: center;
+    padding: 0px 0px 5px 5px;
+}
+footer h3 {
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer article {
+    margin: 20px 0px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#copyright p {
+    text-align: left;
+}
+
+.hidden {
+    display: none;
+}
+
+.align-right {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    right: 20px;
+    top: -18px;
+}
+
+/* Login and Register */
+
+form input,
+form button {
+    width: 100%;
+    padding: 10px;
+    margin: 20px 0px;
+    border-radius: 5px;
+    border: 0px;
+    cursor: pointer;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.user-profile input {
+    width: 10%;
+}
+
+.user-interests {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-info input[type="checkbox"] {
+    width: 10%;
+}
+
+.submit {
+    color: #ffffff;
+    background-color: #0044aa;
+}
+
+.submit:hover {
+    background-color: #0022aa;
+}
+
+.reset {
+    color: white;
+    background-color: #aa0044;
+}
+
+.reset:hover {
+    background-color: #cc1155;
+}
+
+/* -- Media queries -- */
+
+/* Small screens */
+
+@media (min-width: 361px) {
+    .last-visit,
+    .offer,
+    .all-items {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        width: 100px;
+    }
+
+    article.bg-white {
+        width: 47%;
+    }
+}
+
+/* Medium - Large screens */
+
+@media (min-width: 768px) {
+    .user-info,
+    .user-login {
+        padding: 0 25%;
+    }
+}
+
+@media (min-width: 769px) {
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .search {
+        width: 60%;
+    }
+
+    .header-top {
+        width: 70%;
+    }
+
+    header p {
+        width: 30%;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    nav li {
+        font-size: 15px;
+    }
+
+    article.bg-white {
+        width: 23%;
+    }
+
+    .footer-content {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    footer article {
+        width: 33%;
+    }
+}
+
+/* Big screens */
+
+@media (min-width: 1440px) {
+    header,
+    main,
+    .footer-content {
+        padding: 0 10%;
+    }
+    nav > ul > li > a {
+        font-size: 16px;
+    }
+
+    header p {
+        font-size: 14px;
+    }
+}
+
+/* Fix Bootstrap Nav Padding */
+
+.navbar-nav {
+    margin-right: auto !important;
+    margin-left: auto !important;
+}

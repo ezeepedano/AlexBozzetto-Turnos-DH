@@ -1,0 +1,10 @@
+[
+  {
+    "id": 1,
+    "name": "Usuario Administrador",
+    "user": "admin",
+    "profile": "admin",
+    "admin": true,
+    "pass": "$2b$12$V1ZF6d70TcluJNjmI.9IsuhihVMJoCc5D50my7PRDKQQu1xfga9lS"
+  }
+]

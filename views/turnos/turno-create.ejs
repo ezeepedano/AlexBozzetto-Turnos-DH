@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('partials/head-base.ejs', {title: 'Asignar Turno'}) %>
+        <link rel="stylesheet" href="/css/turno.css" />
+    </head>
+
+    <body>
+        <header><%- include('partials/head-asign.ejs') %></header>
+        <main>
+            <h2 class="title">Nuevo Turno</h2>
+
+            <form
+                action="/turnos"
+                method="POST"
+                enctype="multipart/form-data"
+            >
+                <label for="name">Nombre Cliente</label>
+                <input type="text" name="name" />
+                <label for="dni">DNI Cliente</label>
+                <input type="text" name="DNI">
+                <label for="email">Email Cliente</label>
+                <input type="text" name="email">
+                <label for="sector">Sector</label><br>
+                <select name="Sector">
+
+                    <option>Caja</option>
+                    <option>Atencion Al Cliente</option>
+                    <option>Tarjetas</option>
+                                    
+                </select><br><br>
+                
+                <button type="submit" class="submit">Asignar Turno</button>
+            </form>
+        </main>
+
+    </body>
+</html>

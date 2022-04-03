@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+       <%- include('partials/head-base.ejs', {title: "Turnero Banco AMARTA"}) %> 
+    </head>
+
+    <body>
+        <header><%- include('partials/header.ejs') %></header>
+
+        <main>
+            <h2 class="title">Ultimos Turnos</h2>
+            <section class="last-visit">
+
+                <% for (let i = 0; i < turnos.length; i++) { %>
+                <%- include("partials/turno", {turno:turnos[i]}) %>
+                <% }  %>
+            </section>
+        </main>
+
+    </body>
+</html>
