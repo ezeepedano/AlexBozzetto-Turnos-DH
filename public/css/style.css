@@ -80,12 +80,12 @@ p {
     font-weight: 500;
 }
 
-.price {
-    font-size: 18px;
+.name {
+    font-size: 19px;
     width: 30%;
 }
 
-.discount {
+.id {
     font-size: 25px;
     font-weight: 500;
     text-decoration: none;
@@ -96,16 +96,29 @@ p {
     
 }
 
-.description {
+.email {
     font-size: 16px;
     font-weight: 400;
     color: gray;
     display: none;
 }
 
-.last-visit article:hover .description,
-.offer article:hover .description,
-.all-items article:hover .description {
+.last-visit article:hover .email,
+.offer article:hover .email,
+.all-items article:hover .email {
+    display: block;
+}
+
+.sector {
+    font-size: 16px;
+    font-weight: 400;
+    color: gray;
+    display: none;
+}
+
+.last-visit article:hover .sector,
+.offer article:hover .sector,
+.all-items article:hover .sector {
     display: block;
 }
 

@@ -46,7 +46,7 @@ const turnosController = {
 
         //5. Escribe el nuevo contenido en la base de datos sobrescribiendo lo anterior
         fs.writeFileSync(
-            __dirname + "/../turnosDb.json",
+            __dirname + "/../data/turnosDb.json",
             databaseJSON
         );
 
@@ -128,7 +128,7 @@ const turnosController = {
         const databaseJSON = JSON.stringify(database, null, 4);
 
         fs.writeFileSync(
-            __dirname + "/../data/turnosDataBase.json",
+            __dirname + "/../data/turnosDB.json",
             databaseJSON
         );
 
