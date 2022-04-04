@@ -6,13 +6,16 @@
         "email": "juan@juan.com",
         "Sector": "Caja"
     },
-
     {
         "id": 2,
         "name": "Juan Rodriguez",
         "DNI": "41264506 ",
         "email": "juan@juan.com",
         "Sector": "Caja"
+    },
+    {
+        "id": 3,
+        "name": "9 Badge LVL 1",
+        "email": "lina_boz@hotmail.com"
     }
 ]
-   

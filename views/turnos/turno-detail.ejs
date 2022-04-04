@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <%- include('partials/head-base.ejs', {title: 'Asignar Turno'}) %>
-        <link rel="stylesheet" href="/css/turno-detail.css" />
+        <%- include('partials/head-base.ejs', {title: 'Detalle de Turno'}) %>
+        <link rel="stylesheet" href="/css/style.css" />
     </head>
-
+    <STYLE>A {text-decoration: none;} </STYLE>
     <body>
         <header><%- include('partials/header.ejs') %></header>
         <main>
             <h2 class="title" style="text-align: left; font-size: 22px">
-                <%= turno.name%>
+                <%= turno.name %>
             </h2>
 
             <article class="bg-white-turno">
@@ -17,7 +17,7 @@
                 <div class="buy-info">
                     <h2 class="title-turno"><%= turno.id%></h2>
                     <p class="price-turno">
-                        <%= turno.dni%>
+                        <%= turno.DNI%>
                     </p>
                     <p class="conditions-turno">
                         <i class="fas fa-credit-card green"></i> <%= turno.email%>

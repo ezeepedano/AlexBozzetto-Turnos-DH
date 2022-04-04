@@ -78,7 +78,7 @@ const turnosController = {
             return turno.id == req.params.id;
         });
 
-        //3. Crea un turnoo editado con las modificaciones realizadas conservando el ID original
+        //3. Crea un turno editado con las modificaciones realizadas conservando el ID original
         const editedTurno = {
             id: selectedTurno.id,
             name: req.body.name,
@@ -110,7 +110,7 @@ const turnosController = {
         });
 
         if (selectedTurno == null) {
-            return res.send("Error 404 - turnoo no encontrado");
+            return res.send("Error 404 - turno no encontrado");
         }
 
         res.render("turno-delete", {
@@ -132,7 +132,7 @@ const turnosController = {
             databaseJSON
         );
 
-        res.redirect("/turnos");
+        res.redirect("/");
     },
 };
 

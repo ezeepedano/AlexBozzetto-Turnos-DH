@@ -14,15 +14,19 @@ body {
 /* Header */
 
 header {
+    box-sizing: border-box;
     background-color: #b2b3eb;
-    
+    max-height: 150px;
 }
 
 header p {
+    box-sizing: border-box;
     text-align: center;
+    max-height: 150px;
 }
 
 .logo {
+    box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,8 +49,9 @@ main h2 {
 }
 
 article {
-    padding: 20px;
-    margin: 15px 5px;
+    padding: 40px;
+    margin: 10px ;
+    transition-duration: 500ms;
 }
 
 .last-visit article:hover,
@@ -81,9 +86,14 @@ p {
 }
 
 .discount {
-    font-size: 16px;
+    font-size: 25px;
+    font-weight: 500;
+    text-decoration: none;
+    text-decoration-line: none;
     width: 70%;
     color: #39b54a;
+    text-align: center;
+    
 }
 
 .description {
@@ -166,7 +176,8 @@ footer article {
 /* Login and Register */
 
 form input,
-form button {
+form button,
+form select {
     width: 100%;
     padding: 10px;
     margin: 20px 0px;
@@ -197,6 +208,7 @@ form button {
 .submit {
     color: #ffffff;
     background-color: #0044aa;
+    transition-duration: 100ms;
 }
 
 .submit:hover {
@@ -302,9 +314,12 @@ form button {
     }
 }
 
+
+
 /* Fix Bootstrap Nav Padding */
 
 .navbar-nav {
     margin-right: auto !important;
     margin-left: auto !important;
 }
+

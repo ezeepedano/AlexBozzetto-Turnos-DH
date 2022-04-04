@@ -1,3 +1,22 @@
+/* Header */
+
+header {
+    background-color: #b2b3eb;
+    max-height: 150px;
+}
+
+header p {
+    text-align: center;
+    
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: left;
+    
+
 article.bg-white-product {
     box-shadow: 0px 0px 5px rgba(100, 100, 100, 0.5);
 }
