@@ -1,9 +1,16 @@
 [
     {
         "id": 1,
-        "name": "Juan Pablo",
-        "DNI": "41264506 ",
+        "name": "Juan",
+        "dni": 35674120,
         "email": "juan@juan.com",
-        "Sector": "Caja"
+        "sector": "Atencion Al Cliente"
+    },
+    {
+        "id": 2,
+        "name": "mujnhgfvd",
+        "dni": "876543",
+        "email": "kuijyhtgrfe",
+        "sector": "Atencion Al Cliente"
     }
 ]

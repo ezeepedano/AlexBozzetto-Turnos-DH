@@ -15,7 +15,7 @@ body {
 
 header {
     box-sizing: border-box;
-    background-color: #b2b3eb;
+    background-color: #ef3340;
     max-height: 150px;
 }
 
@@ -31,6 +31,7 @@ header p {
     justify-content: center;
     align-items: center;
     margin: left;
+    margin-top: 10px;
 }
 
 
@@ -326,8 +327,6 @@ form select {
         font-size: 14px;
     }
 }
-
-
 
 /* Fix Bootstrap Nav Padding */
 
