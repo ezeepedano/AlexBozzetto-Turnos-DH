@@ -1,6 +1,9 @@
 function assertAdminMiddleware(req, res, next) {
-    if (!res.locals.user.admin) {
-        res.redirect("/auth/login");
+
+    console.log(req.session);
+
+    if (!req.session.loggedUserId) {
+        res.redirect("/admin/login");
     } else {
         next();
     }

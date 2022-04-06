@@ -2,6 +2,13 @@ const getTurnos = require("../utils/getTurnos");
 
 const mainController = {
     main: (req, res) => {
+
+        function updatePrice() {
+          console.log(Date.now());
+    }
+
+    setInterval(updatePrice, 5500);
+        
         const turnos = getTurnos();
         res.render("index", {
             turnos: turnos,

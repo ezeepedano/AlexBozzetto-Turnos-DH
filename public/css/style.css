@@ -35,8 +35,6 @@ header p {
 }
 
 
-
-
 /* Main */
 
 main {
@@ -74,11 +72,47 @@ p {
 }
 
 .title {
-    font-size: 24px;
+    font-size: 30px;
     text-align: left;
     margin-left: 2%;
     color: gray;
     font-weight: 500;
+}
+
+.title-turno {
+    font-size: 65px;
+    text-align: left;
+    color: gray;
+    font-weight: 800;
+}
+.id-turno {
+    font-size: 50px;
+    text-align: center;
+    color: rgb(7, 7, 7);
+    font-weight: 800;
+}
+
+.dni-turno {
+    font-size: 15px;
+    text-align: left;
+    margin-left: 2%;
+    color: rgb(0, 0, 0);
+    font-weight: 400;
+}
+
+.email-turno {
+    font-size: 15px;
+    text-align: left;
+    margin-left: 2%;
+    color: rgb(0, 0, 0);
+    font-weight: 400;
+}
+.sector-turno {
+    font-size: 15px;
+    text-align: left;
+    margin-left: 2%;
+    color: rgb(0, 0, 0);
+    font-weight: 400;
 }
 
 .name {
@@ -335,3 +369,21 @@ form select {
     margin-left: auto !important;
 }
 
+.turnos-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.atendido-btn {
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+    min-width: 80%;
+}
+
+#proximo-turno {
+    display: none;
+}

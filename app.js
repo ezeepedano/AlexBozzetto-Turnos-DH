@@ -32,7 +32,7 @@ app.listen(3000, () => {
 
 //Rutas
 app.use("/", mainRoutes);
-app.use("/auth", authRoutes);
+app.use("/admin", authRoutes);
 app.use("/turnos", turnoRoutes);
 
 // Setea 'user' dentro de locals para usarla despues

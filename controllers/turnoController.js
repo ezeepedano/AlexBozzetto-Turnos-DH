@@ -1,7 +1,39 @@
 const fs = require("fs");
+const { format } = require("path");
 const { runInNewContext } = require("vm");
 const getTurnos = require("../utils/getTurnos");
 const toThousand = require("../utils/toThousand");
+
+const getTurnoSectorName = (sector) => {
+    switch (sector) {
+        case "1":
+            return `Extracciones`;
+            break;
+
+        case "2":
+            return `Depositos`;
+            break;
+
+        case "3":
+            return `Moneda Extrnajera`;
+            break;
+
+        case "4":
+            return `Atencion al cliente`;
+            break;
+
+        case "5":
+            return `Tarjetas`;
+            break;
+
+        case "6":
+            return `Inversiones`;
+            break;
+
+        default:
+            break;
+    }
+};
 
 const turnosController = {
     index: (req, res) => {
@@ -14,7 +46,10 @@ const turnosController = {
         const selectedTurno = database.find((turno) => {
             return req.params.id == turno.id;
         });
-        console.log(loggedUser)
+        console.log(loggedUser);
+
+        selectedTurno.sector = getTurnoSectorName(selectedTurno.sector);
+
         res.render("turno-detail", {
             turno: selectedTurno,
             loggedUser: loggedUser,
@@ -30,13 +65,59 @@ const turnosController = {
 
         //2. Itera el JSON para agregar un nuevo ID a cada turno. Agrega los datos que recibe del formulario a newturno.
 
+        const createId = () => {
+            let id;
+
+            const formatId = () => {
+                const baseId = (database.length + 1)
+                    .toString()
+                    .padStart(2, "0");
+                return baseId;
+            };
+
+            //console.log(formatId());
+
+            switch (req.body.sector) {
+                case "1":
+                    id = `E${formatId()}`;
+                    break;
+
+                case "2":
+                    id = `D${formatId()}`;
+                    break;
+
+                case "3":
+                    id = `M${formatId()}`;
+                    break;
+
+                case "4":
+                    id = `A${formatId()}`;
+                    break;
+
+                case "5":
+                    id = `T${formatId()}`;
+                    break;
+
+                case "6":
+                    id = `I${formatId()}`;
+                    break;
+
+                default:
+                    break;
+            }
+
+            return id;
+        };
+
         const newTurno = {
-            id: database[database.length - 1].id + 1,
+            id: createId(),
             name: req.body.name,
             dni: req.body.dni,
             email: req.body.email,
             sector: req.body.sector,
         };
+
+        console.log(newTurno);
 
         //3. Agrega newturno al final del array database
         database.push(newTurno);
@@ -45,10 +126,7 @@ const turnosController = {
         const databaseJSON = JSON.stringify(database, null, 4);
 
         //5. Escribe el nuevo contenido en la base de datos sobrescribiendo lo anterior
-        fs.writeFileSync(
-            __dirname + "/../data/turnosDb.json",
-            databaseJSON
-        );
+        fs.writeFileSync(__dirname + "/../data/turnosDb.json", databaseJSON);
 
         res.redirect("/turnos/detail/" + newTurno.id);
     },
@@ -62,8 +140,11 @@ const turnosController = {
         });
 
         if (selectedturno == null) {
-            return res.send("Error 404 - turnoo no encontrado");
+            return res.send("Error 404 - turno no encontrado");
         }
+
+        console.log(selectedturno);
+
         res.render("turno-edit", {
             turno: selectedturno,
             toThousand: toThousand,
@@ -96,10 +177,7 @@ const turnosController = {
         const databaseJSON = JSON.stringify(database, null, 4);
 
         //6. Escribe el nuevo contenido en la base de datos sobrescribiendo lo anterior
-        fs.writeFileSync(
-            __dirname + "/../data/turnosDb.json",
-            databaseJSON
-        );
+        fs.writeFileSync(__dirname + "/../data/turnosDb.json", databaseJSON);
 
         res.redirect("/turnos/detail/" + editedTurno.id);
     },
@@ -119,18 +197,16 @@ const turnosController = {
     },
     delete: (req, res) => {
         const database = getTurnos();
+
         const selectedTurno = database.find((turno) => {
-            return turno.id == req.params.id;
+            return turno.id.toString().split(" ").join("") == req.params.id.toString().split(" ").join("")
         });
 
         database.splice(database.indexOf(selectedTurno), 1);
 
         const databaseJSON = JSON.stringify(database, null, 4);
 
-        fs.writeFileSync(
-            __dirname + "/../data/turnosDB.json",
-            databaseJSON
-        );
+        fs.writeFileSync(__dirname + "/../data/turnosDB.json", databaseJSON);
 
         res.redirect("/");
     },

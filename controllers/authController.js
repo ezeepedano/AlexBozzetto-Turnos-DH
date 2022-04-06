@@ -12,11 +12,11 @@ module.exports = {
             );
         });
 
-        if (!user) return res.redirect("/auth/login");
+        if (!user) return res.redirect("/admin/login");
 
         req.session.loggedUserId = user.id;
 
-        return res.redirect("/");
+        return res.redirect("/admin/turnos");
     },
     register: (req, res) => {
         const users = getUsers();
@@ -38,7 +38,7 @@ module.exports = {
         users.push(newUser);
         saveUsers(users);
 
-        res.redirect("/auth/login");
+        res.redirect("/admin/login");
     },
     showLogin: (req, res) => {
         res.render("login");

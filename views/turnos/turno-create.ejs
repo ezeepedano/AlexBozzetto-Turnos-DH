@@ -15,18 +15,21 @@
                 method="POST"
                 enctype="multipart/form-data"
             >
-                <label for="name">Nombre Cliente</label>
+                <label for="name">Nombre Completo del Cliente</label>
                 <input type="text" name="name" />
                 <label for="dni">DNI Cliente</label>
-                <input type="text" name="dni">
+                <input type="number" name="dni">
                 <label for="email">Email Cliente</label>
-                <input type="text" name="email">
+                <input type="email" name="email">
                 <label for="sector">Sector</label><br>
                 <select name="sector">
 
-                    <option>Caja</option>
-                    <option>Atencion Al Cliente</option>
-                    <option>Tarjetas</option>
+                    <option value="1">Extracciones</option>
+                    <option value="2" selected>Depositos</option>
+                    <option value="3">Moneda Extranjera</option>
+                    <option value="4">Atencion Al Cliente</option>
+                    <option value="5">Tarjetas</option>
+                    <option value="6">Inversiones</option>
                                     
                 </select><br><br>
                 

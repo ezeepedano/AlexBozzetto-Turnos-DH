@@ -1,6 +1,7 @@
 function assertLoggedMiddleware(req, res, next) {
-    if (!res.locals.user) {
-        res.redirect("/auth/login");
+
+    if (!req.session.loggedUserId) {
+        res.redirect("/admin/login");
     } else {
         next();
     }

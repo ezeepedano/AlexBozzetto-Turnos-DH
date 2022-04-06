@@ -23,7 +23,7 @@ const upload = multer({ storage: storage });
 
 router.get("/", turnoController.index);
 
-router.get("/create", assertLoggedMiddleware, turnoController.showCreate);
+
 
 router.get("/delete/:id", assertAdminMiddleware, turnoController.showDelete);
 

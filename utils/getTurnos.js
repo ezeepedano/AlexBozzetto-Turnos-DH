@@ -6,6 +6,8 @@ const getTurnos = (req, res) => {
         path.resolve(__dirname, "../data/turnosDb.json"),
         { encoding: "utf-8" }
     );
+    
+    
     return JSON.parse(dbJson);
 };
 

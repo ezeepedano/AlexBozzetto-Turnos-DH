@@ -1,21 +1,42 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
-       <%- include('partials/head-base.ejs', {title: "Turnero Banco AMARTA"}) %> 
+        <%- include('partials/head-base.ejs', {title: "Turnero Banco AMARTA"})
+        %>
     </head>
 
     <body>
         <header><%- include('partials/header.ejs') %></header>
 
         <main>
-            <h2 class="title">Ultimos Turnos</h2>
-            <section class="last-visit">
+            <div id="proximo-turno">
+                <h2 class="title">Proximo Turno</h2>
+                <section id="turnos" class="last-visit">
+                    <%- include("partials/turno", {turno:turnos[0], atendido: true}) %>
+                </section>
+            </div>
 
-                <% for (let i = 0; i < turnos.length; i++) { %>
-                <%- include("partials/turno", {turno:turnos[i]}) %>
-                <% }  %>
-            </section>
+            <div id="listado">
+                <h2 class="title">Ultimos Turnos</h2>
+                <section id="turnos" class="last-visit">
+                    <% for (let i = 0 ; i < turnos.length; i++) { %> <%-
+                    include("partials/turno", {turno:turnos[i], atendido: false}) %> <% } %>
+                </section>
+            </div>
+
+            <!-- Solo mostrar si el usuario es admin -->
+            <div class="turnos-btn">
+                <button>
+                    <a href="/admin/turnos">Nuevo turno</a>
+                </button>
+                <button onclick="callTurno()">Llamar proximo turno</button>
+            </div>
         </main>
-
     </body>
+
+    <script>
+        const callTurno = () => {
+           document.getElementById("proximo-turno").style.display = "block";
+        };
+    </script>
 </html>

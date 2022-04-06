@@ -4,10 +4,15 @@
         <p class="id">Turno N° <%- turno.id %></p>
     </a>
     <div class="turno-info">
-        <p class="name"><%- turno.name %></p>        
+        <p class="name"><%- turno.name %></p>
         <h3 class="email"><%- turno.email %></h3>
-        <p class="sector"><%- turno.sector %></p>
-        
     </div>
+
+    <div>
+        <% if (atendido) { %>
+            <button class="atendido-btn"> <a href="/turnos/delete/<%= turno.id %>">Atendido</a></button>
+          <% } %>
+    </div>
+  
     <br><br>
 </article>

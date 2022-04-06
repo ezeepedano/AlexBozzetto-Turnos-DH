@@ -8,22 +8,24 @@
     <body>
         <header><%- include('partials/header.ejs') %></header>
         <main>
-            <h2 class="title" style="text-align: left; font-size: 22px">
+            <h2 class="title-turno">
                 <%= turno.name %>
             </h2>
 
             <article class="bg-white-turno">
                 
                 <div class="buy-info">
-                    <h2 class="title-turno"><%= turno.id%></h2>
-                    <p class="price-turno">
-                        <%= turno.DNI%>
+                    <h2 class="id-turno"><%= turno.id%></h2>
+                    <p class="dni-turno">
+                        <i class="fas fa-id-card fa-2x"></i> 
+                        <%= turno.dni%>
                     </p>
-                    <p class="conditions-turno">
-                        <i class="fas fa-credit-card green"></i> <%= turno.email%>
+                    <p class="email-turno">
+                        <i class="fas fa-mail-bulk fa-2x"></i> 
+                        <%= turno.email%>
                     </p>
-                    <p class="conditions-turno">
-                        <i class="fas fa-store green"></i>
+                    <p class="sector-turno">
+                        <i class="fas fa-info fa-2x"></i>
                         <%= turno.sector%>
 
                     </p>
