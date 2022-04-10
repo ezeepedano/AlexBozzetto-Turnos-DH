@@ -12,7 +12,8 @@
             <div id="proximo-turno">
                 <h2 class="title">Proximo Turno</h2>
                 <section id="turnos" class="last-visit">
-                    <%- include("partials/turno", {turno:turnos[0], atendido: true}) %>
+                    <%- include("partials/turno", {turno:turnos[0], atendido:
+                    true}) %>
                 </section>
             </div>
 
@@ -20,23 +21,29 @@
                 <h2 class="title">Ultimos Turnos</h2>
                 <section id="turnos" class="last-visit">
                     <% for (let i = 0 ; i < turnos.length; i++) { %> <%-
-                    include("partials/turno", {turno:turnos[i], atendido: false}) %> <% } %>
+                    include("partials/turno", {turno:turnos[i], atendido:
+                    false}) %> <% } %>
                 </section>
             </div>
 
             <!-- Solo mostrar si el usuario es admin -->
-            <div class="turnos-btn">
-                <button>
+            <div>
+                <button class="turnos-btn">
+                    <STYLE>A {text-decoration: none;} </STYLE>
                     <a href="/admin/turnos">Nuevo turno</a>
                 </button>
-                <button onclick="callTurno()">Llamar proximo turno</button>
+                <button onclick="callTurno()" class="llamar-proximo">
+                    Llamar proximo turno
+                </button>
             </div>
+            
         </main>
     </body>
 
     <script>
         const callTurno = () => {
-           document.getElementById("proximo-turno").style.display = "block";
+            document.getElementById("proximo-turno").style.display = "block";
         };
+        setInterval("location.reload()",60000);
     </script>
 </html>

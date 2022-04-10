@@ -20,10 +20,7 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link active" href="/">Inicio</a></li>
-                
-            </ul>
+            
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <% if (!user) { %>
@@ -35,7 +32,7 @@
                 </li>
 
                 <% } else { %>
-                <li class="class="nav-item welcome-message">
+                <li class="user-admin"nav-item welcome-message">
                     <i class="nav-link active fas fa-user"></i> ¡Bienvenido, <%= user ?
                     user.name : "invitado" %>!
                 </li>

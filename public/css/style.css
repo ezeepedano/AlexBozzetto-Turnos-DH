@@ -34,7 +34,6 @@ header p {
     margin-top: 10px;
 }
 
-
 /* Main */
 
 main {
@@ -49,7 +48,7 @@ main h2 {
 
 article {
     padding: 40px;
-    margin: 10px ;
+    margin: 10px;
     transition-duration: 500ms;
 }
 
@@ -128,7 +127,6 @@ p {
     width: 70%;
     color: #39b54a;
     text-align: center;
-    
 }
 
 .email {
@@ -369,21 +367,69 @@ form select {
     margin-left: auto !important;
 }
 
-.turnos-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    margin-top: 10px;
-}
-
 .atendido-btn {
-    display: block;
-    margin: 0 auto;
-    margin-top: 10px;
-    min-width: 80%;
+    width: 100%;
+    padding: 10px;
+    margin: 0px 0px;
+    border-radius: 5px;
+    border: 0px;
+    cursor: pointer;
+    font-weight: 600;
 }
 
-#proximo-turno {
-    display: none;
+.atendido-btn:hover {
+    background-color: #4645456b;
+    transition: 0.2s;
+}
+
+.turnos-btn {
+    width: 100%;
+    padding: 10px;
+    margin: 20px 0px;
+    border-radius: 5px;
+    border: 0px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.turnos-btn:hover {
+    background-color: #9999996b;
+    transition: 0.2s;
+}
+
+.llamar-proximo {
+    width: 100%;
+    padding: 10px;
+    margin: 20px 0px;
+    border-radius: 5px;
+    border: 0px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #0d6efd;
+}
+
+.llamar-proximo:hover {
+    background-color: #6e6e6e6b;
+    transition: 0.2s;
+}
+
+.nav-item {
+    font-size: 15px;
+    text-align: right;
+    align-items: center;
+    white-space: nowrap;
+    margin-left: 2%;
+    margin-bottom: 15px;
+    color: rgb(31, 31, 31);
+    font-weight: 400;
+}
+
+.user-admin {
+    font-size: 15px;
+    text-align: right;
+    white-space: nowrap;
+    margin-left: 2%;
+    margin-bottom: 15px;
+    color: rgb(31, 31, 31);
+    font-weight: 400;
 }

@@ -1,1 +1,44 @@
-[]
+[
+    {
+        "id": "D01",
+        "name": "Juanito",
+        "dni": "1234567",
+        "email": "j@j.com",
+        "sector": "Depositos"
+    },
+    {
+        "id": "M02",
+        "name": "Pedro",
+        "dni": "4625789",
+        "email": "p@p.com",
+        "sector": "3"
+    },
+    {
+        "id": "T03",
+        "name": "Alex Bozzetto",
+        "dni": "41264506",
+        "email": "epedano@gmail.com",
+        "sector": "5"
+    },
+    {
+        "id": "I04",
+        "name": "Lina Bozzetto",
+        "dni": "20454087",
+        "email": "lina_boz@hotmail.com",
+        "sector": "6"
+    },
+    {
+        "id": "A05",
+        "name": "Raul",
+        "dni": "6523087",
+        "email": "lina_boz@hotmail.com",
+        "sector": "4"
+    },
+    {
+        "id": "M06",
+        "name": "Giuliana",
+        "dni": "41600350",
+        "email": "giuliiceballos@hotmail.com",
+        "sector": "3"
+    }
+]

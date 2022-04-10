@@ -30,10 +30,18 @@
 
                     </p>
                     <form action="">
-                        <button class="submit" type="submit"><a href="/turnos/delete/<%= turno.id %>">Borrar Turno</a></button>  
+                        <button class="submit" type="submit">
+                            <STYLE>A {text-decoration: none;} </STYLE>
+                            <a class="submit" href="/turnos/delete/<%= turno.id %>">Borrar Turno</a>
+                        </button>  
+                        <button class="submit" type="submit">
+                            <STYLE>A {text-decoration: none;} </STYLE>
+                            <a class="submit" href="/admin/turnos">Nuevo Turno</a>
+                        </button>
                     </form>
                     
             </article>
         </main>
     </body>
+    
 </html>

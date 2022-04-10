@@ -4,7 +4,7 @@ const mainController = {
     main: (req, res) => {
 
         function updatePrice() {
-          console.log(Date.now());
+          ;
     }
 
     setInterval(updatePrice, 5500);
