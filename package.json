@@ -1,5 +1,5 @@
 {
-    "name": "mercadoliebre",
+    "name": "alex-turnos",
     "version": "1.0.0",
     "description": "",
     "main": "app.js",
@@ -8,14 +8,14 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/marcosdellavecchia/mercadoliebre.git"
+        "url": "git+https://github.com/marcosdellavecchia/alex-turnos.git"
     },
     "author": "",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/marcosdellavecchia/mercadoliebre/issues"
+        "url": "https://github.com/marcosdellavecchia/alex-turnos/issues"
     },
-    "homepage": "https://github.com/marcosdellavecchia/mercadoliebre#readme",
+    "homepage": "https://github.com/marcosdellavecchia/alex-turnos#readme",
     "dependencies": {
         "all": "^0.0.0",
         "bcrypt": "^5.0.0",
